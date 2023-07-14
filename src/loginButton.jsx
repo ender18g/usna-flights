@@ -54,17 +54,17 @@ export function LoginButton() {
 	if (signInCheckResult.signedIn === true) {
 		return (
     <Flex align={'center'} p={0}>
-      <Button size={'md'} colorScheme='gray' onClick={() => signOut(auth)} >
-       Sign Out
+
       <Image
         // Make mouseover pointer
-          maxW={'50px'}
+          maxW={'40px'}
         cursor="pointer"
-          src={googleLogo}
+          src={auth.currentUser.photoURL}
+          borderRadius={'full'}
           p={0}
-        onClick={() => signIn(auth)}
+        onClick={() => signOut(auth)}
         ></Image>
-        </Button>
+
 		</Flex>
 		);
 	} else {

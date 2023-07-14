@@ -16,9 +16,11 @@ export default function App() {
 	const firebaseapp = useFirebaseApp();
 	const auth = getAuth(firebaseapp);
 
+
 	return (
 		<Routes>
 			<Route path="/" element={<MenuBar />}>
+        <Route index element={<Splash />} />
 				<Route path="calendar" element={<BigCalendar />} />
 				<Route path="request" element={<RequestForm />} />
 				<Route path="login" element={<Splash />} />
